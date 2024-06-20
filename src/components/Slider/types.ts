@@ -49,7 +49,7 @@ export interface SliderProps<ValueType = number | [number, number]> extends DOMP
     /** The control's tabIndex attribute */
     tabIndex?: ValueType;
     /** Ref to Slider's component props of focus and blur */
-    apiRef?: React.RefObject<BaseSliderRefType>;
+    apiRef?: React.Ref<BaseSliderRefType>;
     'aria-label'?: string | [string, string];
     'aria-labelledby'?: string | [string, string];
     id?: string;
