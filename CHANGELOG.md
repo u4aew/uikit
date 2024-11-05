@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.35.0](https://github.com/gravity-ui/uikit/compare/v6.34.0...v6.35.0) (2024-11-05)
+
+
+### Features
+
+* **NumberInput:** add new component ([#1826](https://github.com/gravity-ui/uikit/issues/1826)) ([75be05e](https://github.com/gravity-ui/uikit/commit/75be05e42c95226592cdd2139894e9ff791280af))
+* **PlaceholderContainer:** add qa prop ([#1925](https://github.com/gravity-ui/uikit/issues/1925)) ([77ad28d](https://github.com/gravity-ui/uikit/commit/77ad28d8aa0af910999e0ed54fce806767241946))
+
+
+### Bug Fixes
+
+* **PlaceholderContainer:** add component to index file ([#1924](https://github.com/gravity-ui/uikit/issues/1924)) ([cdce171](https://github.com/gravity-ui/uikit/commit/cdce1715a6fe5ceebff7b43c9146c3c1bef9f093))
+* **Toaster:** reveal animation lag ([#1927](https://github.com/gravity-ui/uikit/issues/1927)) ([e16fa1c](https://github.com/gravity-ui/uikit/commit/e16fa1ccc7e1f053f4ff696d24ee6d4bbfd35a6a))
+
 ## [6.34.0](https://github.com/gravity-ui/uikit/compare/v6.33.0...v6.34.0) (2024-10-25)
 
 
