@@ -1,3 +1,5 @@
+import type * as React from 'react';
+
 import type {DistributiveOmit} from '../../../types/utils';
 import type {DOMProps, QAProps} from '../../types';
 import type {AvatarIconProps} from '../AvatarIcon';
@@ -28,3 +30,9 @@ export type AvatarProps = AvatarBaseProps &
         AvatarImageProps | AvatarIconProps | AvatarTextProps | AvatarAriaProps,
         keyof AvatarCommonProps
     >;
+
+export type AvatarContextType = {
+    size?: AvatarSize;
+};
+
+export type AvatarContextProviderProps = React.PropsWithChildren<AvatarContextType>;

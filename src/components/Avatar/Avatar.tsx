@@ -7,6 +7,7 @@ import {AvatarImage} from './AvatarImage';
 import {AvatarText} from './AvatarText';
 import {DEFAULT_AVATAR_SIZE} from './constants';
 import type {AvatarProps} from './types/main';
+import {useAvatarContext} from './useAvatarContext';
 
 import './Avatar.scss';
 
@@ -27,6 +28,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>((props, ref)
         qa,
     } = props;
 
+    const avatarSize = useAvatarContext()?.size || size;
     const style = {backgroundColor, color: borderColor, ...styleProp};
 
     const renderContent = () => {
@@ -40,7 +42,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>((props, ref)
                     srcSet={props.srcSet}
                     alt={props.alt || title}
                     loading={props.loading}
-                    size={size}
+                    size={avatarSize}
                 />
             );
         }
@@ -51,7 +53,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>((props, ref)
                     className={b('icon')}
                     icon={props.icon}
                     color={props.color}
-                    size={size}
+                    size={avatarSize}
                 />
             );
         }
@@ -62,7 +64,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>((props, ref)
                     className={b('text')}
                     text={props.text}
                     color={props.color}
-                    size={size}
+                    size={avatarSize}
                 />
             );
         }
@@ -72,7 +74,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>((props, ref)
 
     return (
         <div
-            className={b({size, theme, view, 'with-border': Boolean(borderColor)}, className)}
+            className={b({avatarSize, theme, view, 'with-border': Boolean(borderColor)}, className)}
             title={title}
             role="img"
             aria-label={ariaLabel}
